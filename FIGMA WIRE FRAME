@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="new-cart.css">
+</head>
+<body>
+    <div class="words">
+        <h1>CART</h1>
+    </div>
+    <div class="product-container">
+        <div class="product">
+            <img src="pexels-tdcat-437037.jpg" alt="Smart Watch">
+            <div class="product-details">
+                <p>130000<br>smart watch series</p>
+            </div>
+            <div class="quantity-control">
+                <button class="decrease">-</button>
+                <input type="number" value="1" min="1">
+                <button class="increase">+</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="pexels-craigmdennis-205421.jpg" alt="HP Laptop">
+            <div class="product-details">
+                <p>400000<br>HP laptop</p>
+            </div>
+            <div class="quantity-control">
+                <button class="decrease">-</button>
+                <input type="number" value="1" min="1">
+                <button class="increase">+</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="pexels-daniel-reche-718241-3721941.jpg" alt="Sound Bass">
+            <div class="product-details">
+                <p>20000<br>Sound bass</p>
+            </div>
+            <div class="quantity-control">
+                <button class="decrease">-</button>
+                <input type="number" value="1" min="1">
+                <button class="increase">+</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
