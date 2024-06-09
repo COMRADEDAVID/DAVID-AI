@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <style>
+    body {
+        background-color: #073dc7;
+        font-family: Arial, sans-serif;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .converter {
+        background-color: #0288d1;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        color: rgb(16, 34, 230);
+        text-align: center;
+        width: 300px;
+    }
+    .converter input, .converter button {
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+    }
+    .converter button {
+        background-color: #01579b;
+        color: rgb(69, 3, 236);
+        cursor: pointer;
+    }
+    .converter button:hover {
+        background-color: #013f78;
+    }
+    .result {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+</style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: darkblue;
+        }
+        .converter {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #6511f7;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgb(224, 224, 233);
+        }
+        .converter input[type="text"] {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 18px;
+        }
+        .converter input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="converter">
+    <h2>Currency Converter</h2>
+    <input type="text" id="usdInput" placeholder="Enter amount in USD">
+    <input type="button" value="Convert to NGN" onclick="convertToNaira()">
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function convertToNaira() {
+        var usdInput = parseFloat(document.getElementById('usdInput').value);
+        var resultElement = document.getElementById('result');
+        var exchangeRate = 1336.50; // Exchange rate (1 USD = 1336,50 NGN)
+        var result;
+
+        if (isNaN(usdInput)) {
+            resultElement.textContent = 'Please enter a valid number';
+            return;
+        }
+
+        result = usdInput * exchangeRate;
+        resultElement.textContent = usdInput + ' USD is ' + result.toFixed(2) + ' NGN';
+    }
+</script>
+
+</body>
+</html>
